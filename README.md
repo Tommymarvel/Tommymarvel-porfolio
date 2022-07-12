@@ -17,11 +17,11 @@ Additional description about the project and its features.
 
 **Instructions on how to access my project locally.**
  To Access my project locally please follow the following instructions;
-1. Enter this url:  https://github.com/Tommymarvel/Personal-portfolio-2/tree/mobile-version in your web browser.
+1. Enter this url:  https://github.com/Tommymarvel/Tommymarvel2.github.io/tree/deployment in your web browser.
 2. Once opened navigate to the top left level of the project a green code download button will be visible on the righthand side.
 3. Select download Zip option from drop down menu.
 4. Once the download is complete you will be able to access my project locally.
-Here is my repository link: https://github.com/Tommymarvel/Personal-portfolio-2/tree/main
+Here is my repository link: https://github.com/Tommymarvel/Tommymarvel2.github.io
 
 
 ## Authors
@@ -30,6 +30,8 @@ Here is my repository link: https://github.com/Tommymarvel/Personal-portfolio-2/
 - GitHub: (https://github.com/tommymarvel)
 - Twitter: [@tomiwa_ibironke](https://twitter.com/tomiwa_ibironke) 
 
+## Live Demo
+[Live Demo](https://tommymarvel.github.io/Tommymarvel2.github.io/)
 
 ## 🤝 Contributing
 
