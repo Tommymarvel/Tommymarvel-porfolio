@@ -6,6 +6,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="styles.css" />
+  <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
   <title>Tommymarvel Portfolio</title>
 </head>
 
@@ -14,22 +21,23 @@
     <header class="white">
       <a class="logo" href="#">My logo</a>
       <nav class="nav-bars">
-        <div class="hambuger">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
+        <div id="hamburger">
+          <i class="fa fa-bars"></i>
         </div>
-        <div class="mobile-menu active">
+        <div class="mobile-menu">
+          <a href="#" class="close-icon" id="closemenu"
+                ><img src="/images/Icon.png" alt="X icon"></i
+              ></a>
           <ul class="mobile-nav">
-            <li class="nav-item"><a href="#" class="nav-link">Portfolio</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">About</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+            <li class="nav-item"><a href="#work-section-link" class="nav-link">Portfolio</a></li>
+            <li class="nav-item"><a href="#about-section-link" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="#contact-form-link" class="nav-link">Contact</a></li>
           </ul>
         </div>
         <ul class="nav-tags">
-          <li class="nav-item"><a href="#" class="nav-link">Portfolio</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">About</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+          <li class="nav-item"><a href="#work-section-link" class="nav-link">Portfolio</a></li>
+          <li class="nav-item"><a href="#about-section-link" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="#contact-form-link" class="nav-link">Contact</a></li>
         </ul>
       </nav>
     </header>
@@ -69,7 +77,7 @@
         </div>
       </section>
   </div>
-  <section class="work-section">
+  <section class="work-section" id="work-section-link">
     <div class="left1">
       <div class="project-card">
         <div class="snap1"></div>
@@ -216,7 +224,7 @@
       </div>
     </div>
   </section>
-  <section class="section-about">
+  <section class="section-about" id="about-section-link">
     <div class="about-grid">
       <div class="text">
         <div class="headline-text">
@@ -294,7 +302,7 @@
   </section>
   </main>
   <footer>
-    <section class="contact-form-section">
+    <section class="contact-form-section" id="contact-form-link">
       <div class="contactcenter">
         <h1 id="contact-me">Contact me</h1>
         <p id="contact-text">
@@ -320,7 +328,7 @@
       </div>
     </section>
   </footer>
-  <script src="script.js"></script>
+  <script src="test.js"></script>
 </body>
 
 </html>
