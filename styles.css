@@ -19,7 +19,8 @@ body {
   position: absolute;
   width: 100%;
 }
-
+@media (max-width: 768px) {
+  
 .firstpage {
   background-image: url("./images/background.png");
   background-size: cover;
@@ -77,7 +78,7 @@ body {
   padding: 0 24px;
 } */
 
-.nav-tags {
+/*.nav-tags {
   position: fixed;
   left: 100%;
   top: 70px;
@@ -88,7 +89,9 @@ body {
   height: 100vh;
   text-align: center;
   transition: 0.5s;
+}*/
 }
+
 
 .nav-item {
   margin: 16px 0;
@@ -661,6 +664,8 @@ textarea {
   color: #b3bac5;
 }
 
+
+
 @media (min-width: 768px) {
   * {
     margin: 0;
@@ -676,6 +681,9 @@ textarea {
   body {
     font-family: "Poppins", sans-serif;
     background-color: #e5e5e5;
+  }
+  .mobile-menu {
+    display: none;
   }
 
   .white {
