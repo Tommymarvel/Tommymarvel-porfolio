@@ -19,6 +19,7 @@ body {
   position: absolute;
   width: 100%;
 }
+
 @media (max-width: 768px) {
   .firstpage {
     background-image: url("./images/background.png");
@@ -96,13 +97,12 @@ body {
   .mobile-menu.active {
     left: 0;
   }
-
 }
 
 .nav-item {
-    list-style: none;
-    margin-bottom: 40px;
-    transition: all 0.4s;
+  list-style: none;
+  margin-bottom: 40px;
+  transition: all 0.4s;
 }
 
 .nav-tags {
