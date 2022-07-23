@@ -21,10 +21,10 @@ body {
 }
 
 @media (max-width: 768px) {
-
   #projects-section {
     display: none;
   }
+
   .firstpage {
     background-image: url("./images/background.png");
     background-size: cover;
@@ -245,7 +245,7 @@ a {
   flex-grow: 0;
 }
 
-/*.snap1 {
+/* .snap1 {
   height: 220px;
   width: 100%;
   left: 16px;
@@ -695,6 +695,7 @@ textarea {
     font-family: "Poppins", sans-serif;
     background-color: #e5e5e5;
   }
+
   #projects-section-mobile {
     display: none;
   }
@@ -702,7 +703,6 @@ textarea {
   /* modal */
   .modal {
     position: relative;
-    display: none;
     background-color: #fff;
     border-radius: 10px;
   }
@@ -948,7 +948,7 @@ textarea {
     gap: 16px;
   }
 
-  /*.snap1 {
+  /* .snap1 {
     height: 448px;
     width: 100%;
     left: 16px;
@@ -1431,4 +1431,92 @@ textarea {
   .contact-form-section textarea::placeholder {
     color: #b3bac5;
   }
+}
+
+.container-popup1 {
+  position: relative;
+}
+
+.popup-row {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  left: 1rem;
+  bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  gap: 12px;
+  background: #fff;
+  border: 1px solid #dfe1e6;
+  border-radius: 16px;
+  max-height: 100%;
+  z-index: 11;
+  overflow-y: scroll;
+}
+
+.overlay {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+h3.popup-header {
+  margin-right: auto;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 44px;
+  color: #172b4d;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.seelive {
+  margin-right: 2rem;
+}
+
+.close-popup img {
+  position: absolute;
+  top: 2.7rem;
+  right: 2rem;
+}
+
+.try-me {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  background-color: black;
+  top: 0;
+  left: 0;
+}
+
+.try-me.active {
+  display: flex;
+}
+
+.big-btn {
+  height: 48px;
+  width: 146px;
+  border-radius: 10px;
+  border: 2px solid #6070ff;
+  background-color: #fff;
+  color: #396df2;
+  font-family: "poppins", sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.live {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  bottom: 50%;
 }
