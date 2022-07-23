@@ -228,7 +228,7 @@ seeMe1.forEach((n, idx) =>
     closeBtn.addEventListener('click', () => {
       const popupRow = document.querySelector('.popup-row');
       popupRow.classList.add("none");
-      console.log(closeBtn);
+      
     })
   })
 );
@@ -242,7 +242,7 @@ seeMe2.forEach((n, idx) =>
 closeBtn.addEventListener('click', () => {
   const popupRow = document.querySelector('.popup-row');
   popupRow.classList.add("none");
-  console.log(closeBtn);
+  
 })
   })
 );
