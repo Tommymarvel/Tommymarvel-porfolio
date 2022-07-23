@@ -10,7 +10,7 @@ const portfolioDetails = [
     mobileImg: "images/photo1.png",
     technologies: ["html", "css", "ruby", "javascript"],
     Tags: ["Canopy", "Back End Dev", "2015"],
-    tagsImg: ["dot.png", "dot.png"],
+    tagsImg: ["./images/dot.png", "./images/dot.png"],
     liveLink: ["#"],
     sourceLink: ["#"],
   },
@@ -25,7 +25,7 @@ const portfolioDetails = [
     mobileImg: "images/photo2.png",
     technologies: ["html", "css", "ruby", "javascript"],
     Tags: ["Facebook", "Full Stack Dev", "2015"],
-    tagsImg: ["dot.png", "dot.png"],
+    tagsImg: ["./images/dot.png", "./images/dot.png"],
     liveLink: ["#"],
     sourceLink: ["#"],
   },
@@ -40,7 +40,7 @@ const portfolioDetails = [
     mobileImg: "images/photo3.png",
     technologies: ["html", "css", "ruby", "javascript"],
     Tags: ["Facebook", "Full Stack Dev", "2015"],
-    tagsImg: ["dot.png", "dot.png"],
+    tagsImg: ["./images/dot.png", "./images/dot.png"],
     liveLink: ["#"],
     sourceLink: ["#"],
   },
@@ -55,7 +55,7 @@ const portfolioDetails = [
     mobileImg: "images/photo4.png",
     technologies: ["html", "css", "ruby", "javascript"],
     Tags: ["Uber", "Lead Developer", "2015"],
-    tagsImg: ["images/dot.png", "dot.png"],
+    tagsImg: ["images/dot.png", "./images/dot.png"],
     liveLink: ["#"],
     sourceLink: ["#"],
   },
@@ -94,7 +94,7 @@ function createCards() {
           <li class="langu">${item.technologies[2]}</li>
         </ul>
       </div>
-      <button type="button" class="btn-one">See project</button>
+      <button type="button" class="btn-two">See project</button>
     </div>
   </div>
   </div>`;
@@ -135,7 +135,7 @@ function createCardsMobile() {
           <li class="langu">${items.technologies[2]}</li>
         </ul>
       </div>
-      <button type="button" class="btn-one">See project</button>
+      <button type="button" class="btn-one1">See project</button>
     </div>
   </div>
   </div>`;
@@ -143,16 +143,55 @@ function createCardsMobile() {
 }
 createCardsMobile();
 
-const seeMe = document.querySelectorAll(".btn-one");
+const seeMe1 = document.querySelectorAll(".btn-one1");
+const seeMe2 = document.querySelectorAll(".btn-two");
 
 function createPop(idx) {
   pop.innerHTML = `
 <div class="container-popup1">
     <div class="popup-row">
+    <div class="popup-header">
+      <h3 class="popup-header mobile-title">${portfolioDetails[idx].name}</h3>
       <div class="close-popup">
-        
+      <h2 id="close-btn1">X</h2>
       </div>
-       <h3 class="popup-header mobile-title">${portfolioDetails[idx].name}</h3>
+    </div>
+      <div class="sub-row">
+        <span class="work-sub">${portfolioDetails[idx].Tags[0]}</span>
+        <span class="work-skill">${portfolioDetails[idx].Tags[0]}</span>
+        <span class="work-experience">${portfolioDetails[idx].Tags[2]}</span>
+      </div>
+      <img src="${portfolioDetails[idx].img}" class="work-img popupimg" alt="" />
+      <div class="row-details">
+        <p>${portfolioDetails[idx].moreDetails} </p>
+      </div>
+      <div class="sub-row">
+        <a href="#" class="skills">${portfolioDetails[idx].technologies[1]}</a>
+        <a href="#" class="skills">${portfolioDetails[idx].technologies[1]}</a>
+        <a href="#" class="skills">${portfolioDetails[idx].technologies[1]}</a>
+      </div>
+      <div class="live">
+        <a href="#">
+          <div class="big-btn">See Live</div>
+        </a>
+        <a href="#">
+          <div class="big-btn">See Source</div>
+        </a>
+      </div>
+    </div>
+  </div>`;
+}
+
+function createPopDesktop(idx) {
+  pop.innerHTML = `
+<div class="container-popup1">
+    <div class="popup-row">
+    <div class="popup-header">
+      <h3 class="popup-header mobile-title">${portfolioDetails[idx].name}</h3>
+      <div class="close-popup">
+      <h2 id="close-btn">X</h2>
+      </div>
+    </div>
       <div class="sub-row">
         <span class="work-sub">${portfolioDetails[idx].Tags[0]}</span>
         <span class="counter"><img src= "${portfolioDetails[idx].tagsImg[0]}" alt="" /></span>
@@ -181,33 +220,29 @@ function createPop(idx) {
   </div>`;
 }
 
-seeMe.forEach((n, idx) =>
+seeMe1.forEach((n, idx) =>
   n.addEventListener("click", () => {
     createPop(idx);
     pop.classList.add("active");
+    const closeBtn = document.getElementById("close-btn1");
+    closeBtn.addEventListener("click", () => {
+      const popupRow = document.querySelector(".popup-row");
+      popupRow.classList.add("none");
+      console.log(closeBtn);
+    });
   })
 );
 
-// /* <div class="work-row">
-// <img
-// src="images/Snapshoot%20Portfolio-desktop.png"
-// class="work-img-desktop"
-// alt=""
-// />
-// <div class="col-description">
-// <h3>${portfolioDetails[idx].name}</h3>
-// <span class="work-title"></span>
-// <img src= class="work-dot" alt="sd" />
-// <span class="skills-text"></span>
-// <img src="" class="work-dot" alt="so" />
-// <span class="skills-text"></span>
-// <p class="work-text">
-// </p>
-// <div class="skills-btn">
-//  <a href="#" class="work-skills"${portfolioDetails[idx].technologies[1]}</a>
-//  <a href="#" class="work-skills"${portfolioDetails[idx].technologies[1]}</a>
-//  <a href="#" class="work-skills"${portfolioDetails[idx].technologies[1]}a>
-// </div>
-// <a href="#" class="view-project-btn">See Project</a>
-// </div>
-// </div>`--*/
+seeMe2.forEach((n, idx) =>
+  n.addEventListener("click", () => {
+    createPopDesktop(idx);
+    pop.classList.add("active");
+    const closeBtn = document.getElementById("close-btn");
+
+    closeBtn.addEventListener("click", () => {
+      const popupRow = document.querySelector(".popup-row");
+      popupRow.classList.add("none");
+      console.log(closeBtn);
+    });
+  })
+);
