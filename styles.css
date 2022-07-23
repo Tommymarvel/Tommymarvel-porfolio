@@ -528,6 +528,7 @@ a .btn-two {
 .contact-form-section {
   width: 100%;
   background: #6070ff;
+
   /* background-image: url(./images/contact-form-shape-mobile.png); */
   background-repeat: no-repeat;
   background-size: contain;
@@ -633,23 +634,6 @@ textarea {
 
 .contact-form-section textarea::placeholder {
   color: #b3bac5;
-}
-
-.close-popup {
-  width: 20px;
-  color: #000;
-  font-size: 20px;
-}
-
-.popup-header {
-  display:flex;
-  justify-content: space-between;
-  width: 100%;
-  padding: 5px 20px;
-}
-
-.none {
-  display: none;
 }
 
 @media (min-width: 768px) {
@@ -1421,6 +1405,7 @@ h3.popup-header {
   width: 100%;
   height: 100vh;
   position: absolute;
+
   /* background-color: black; */
   top: 0;
   left: 0;
@@ -1456,7 +1441,7 @@ h3.popup-header {
 }
 
 .popup-header {
-  display:flex;
+  display: flex;
   justify-content: space-between;
   width: 100%;
   padding: 5px 20px;
