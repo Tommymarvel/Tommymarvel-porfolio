@@ -13,7 +13,7 @@
   <title>Tommymarvel Portfolio</title>
 </head>
 
-<bo>
+<body>
   <div class="firstpage">
     <header class="white">
       <a class="logo" href="#">My logo</a>
@@ -170,7 +170,7 @@
           developing, a feature that you need built or a project <br />
           that needs coding. I'd love to help with it.
         </p>
-        <form action="https://formspree.io/f/mlezvnnz" method="post" class="contact-form">
+        <form action="https://formspree.io/f/mlezvnnz" method="post" class="contact-form" id="contact-forms">
           <ul id="form-data">
             <li class="input-data">
               <input type="text" id="name" name="user_name" maxlength="30" placeholder="Your Name" required />
@@ -184,12 +184,14 @@
             </li>
           </ul>
           <button type="submit" class="butt">Get In Touch</button>
+          <div id="error" class="validation-error">Kindly make sure your email is in lowercase!</div>
         </form>
       </div>
     </section>
   </footer>
   <script src="modal.js"></script>
   <script src="test.js"></script>
+  <script src="validation.js"></script>
 </body>
 
 </html>
