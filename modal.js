@@ -61,7 +61,6 @@ const portfolioDetails = [
   },
 ];
 const container = document.querySelector('#projects-section');
-const pop = document.querySelector('.try-me');
 
 function createCards() {
   portfolioDetails.forEach((item) => {
@@ -89,9 +88,9 @@ function createCards() {
       </p>
       <div class="language1-inline">
         <ul>
-          <li class="langu">${item.technologies[0]}</li>
-          <li class="langu">${item.technologies[1]}</li>
-          <li class="langu">${item.technologies[2]}</li>
+          ${item.technologies
+    .map((e) => `<li class="langu">${e}</li>`)
+    .join('')}
         </ul>
       </div>
       <button type="button" class="btn-two">See project</button>
@@ -123,16 +122,18 @@ function createCardsMobile() {
           <img src="images/bullets.png" alt="bullet" class="circle" />
           2015
         </li>
-      </ul>
+          <ul>
+          ${items.technologies
+    .map((e) => `<li class="langu">${e}</li>`)
+    .join('')}
+        </ul>
   
       <p>
       ${items.description}
       </p>
       <div class="language1-inline">
         <ul>
-          <li class="langu">${items.technologies[0]}</li>
-          <li class="langu">${items.technologies[1]}</li>
-          <li class="langu">${items.technologies[2]}</li>
+ 
         </ul>
       </div>
       <button type="button" class="btn-one1">See project</button>
@@ -146,99 +147,67 @@ createCardsMobile();
 const seeMe1 = document.querySelectorAll('.btn-one1');
 const seeMe2 = document.querySelectorAll('.btn-two');
 
-function createPop(idx) {
-  pop.innerHTML = `
-<div class="container-popup1">
-    <div class="popup-row">
-    <div class="popup-header">
-      <h3 class="popup-header mobile-title">${portfolioDetails[idx].name}</h3>
-      <div class="close-popup">
-      <h2 id="close-btn1">X</h2>
+const desktopPopupText = " Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been  industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when unknown printer took a galley of type and scrambled it 1960s with the releorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum han printer took a galley of type and scrambled it 1960s with the releawn printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea";
+
+const popupStringLiteral = `
+  <div class="popup-container">
+      <h1>Tonic</h1>
+      <img
+        src="./images/popup/close-icon.svg"
+        alt="close image"
+        class="close-img"
+      />
+      <img src="./images/popup/frame.svg" alt="canopy" class="popup-cano" />
+
+      <img src="./images/popup/photo1.png" alt="#" class="popup-photo display-only-mobile" />
+      <img src="./images/popup/popup-desktop.png" alt="#" class="popup-photo display-only-desktop" />
+
+      <div class="text-and-tags">
+        <p class="text display-only-mobile" >
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1500s, when an unknown printer took a galley of type and
+          scrambled it to make a type specimen book. It has survived not only
+          five centuries, but also the leap into electronic typesetting,
+          remaining essent
+        </p>
+
+        <p class="display-only-desktop">${desktopPopupText} </p>
+
+        <div class="tags-live-source-envelope">
+          <img
+            src="./images/popup/mobile-tags.svg"
+            alt="mobile tags"
+            class="tags1"
+          />
+          <img
+            src="./images/popup/tags-desktop.svg"
+            alt="tags desktop"
+            class="display-on-desktop"
+          />
+
+          <div class="source-live">
+            <img src="./images/popup/see-live.png" alt="see live" />
+            <img src="./images/popup/see-source.png" alt="see source" />
+          </div>
+        </div>
       </div>
     </div>
-      <div class="sub-row">
-        <span class="work-sub">${portfolioDetails[idx].Tags[0]}</span>
-        <span class="work-skill">${portfolioDetails[idx].Tags[0]}</span>
-        <span class="work-experience">${portfolioDetails[idx].Tags[2]}</span>
-      </div>
-      <img src="${portfolioDetails[idx].img}" class="work-img popupimg" alt="" />
-      <div class="row-details">
-        <p>${portfolioDetails[idx].moreDetails} </p>
-      </div>
-      <div class="sub-row">
-        <a href="#" class="skills">${portfolioDetails[idx].technologies[1]}</a>
-        <a href="#" class="skills">${portfolioDetails[idx].technologies[1]}</a>
-        <a href="#" class="skills">${portfolioDetails[idx].technologies[1]}</a>
-      </div>
-      <div class="live">
-        <a href="#">
-          <div class="big-btn">See Live</div>
-        </a>
-        <a href="#">
-          <div class="big-btn">See Source</div>
-        </a>
-      </div>
-    </div>
-  </div>`;
-}
+`;
 
-function createPopDesktop(idx) {
-  pop.innerHTML = `
-<div class="container-popup1">
-    <div class="popup-row">
-    <div class="popup-header">
-      <h3 class="popup-header mobile-title">${portfolioDetails[idx].name}</h3>
-      <div class="close-popup">
-      <h2 id="close-btn">X</h2>
-      </div>
-    </div>
-      <div class="sub-row">
-        <span class="work-sub">${portfolioDetails[idx].Tags[0]}</span>
-        <span class="counter"><img src= "${portfolioDetails[idx].tagsImg[0]}" alt="" /></span>
-        <span class="work-skill">${portfolioDetails[idx].Tags[0]}</span>
-        <span class="counter"><img src="${portfolioDetails[idx].tagsImg[1]}" alt="" /></span>
-        <span class="work-experience">${portfolioDetails[idx].Tags[2]}</span>
-      </div>
-      <img src="${portfolioDetails[idx].img}" class="work-img popupimg" alt="" />
-      <div class="row-details">
-        <p>${portfolioDetails[idx].moreDetails} </p>
-      </div>
-      <div class="sub-row">
-        <a href="#" class="skills">${portfolioDetails[idx].technologies[1]}</a>
-        <a href="#" class="skills">${portfolioDetails[idx].technologies[1]}</a>
-        <a href="#" class="skills">${portfolioDetails[idx].technologies[1]}</a>
-      </div>
-      <div class="live">
-        <a href="#">
-          <div class="big-btn">See Live</div>
-        </a>
-        <a href="#">
-          <div class="big-btn">See Source</div>
-        </a>
-      </div>
-    </div>
-  </div>`;
-}
+const popupWrapper = document.createElement('div');
+popupWrapper.classList = 'pop-wrapper';
+popupWrapper.innerHTML = popupStringLiteral;
 
-seeMe1.forEach((n, idx) => n.addEventListener('click', () => {
-  createPop(idx);
-  pop.classList.add('active');
-  const closeBtn = document.getElementById('close-btn1');
-  closeBtn.addEventListener('click', () => {
-    const popupRow = document.querySelector('.popup-row');
-    popupRow.classList.add('none');
-    console.log(closeBtn);
-  });
-}));
+const clickableBtns = [seeMe1, seeMe2];
+clickableBtns.forEach((btn) => {
+  btn.forEach((n) => n.addEventListener('click', () => {
+    n.parentElement.appendChild(popupWrapper);
+    n.parentElement.style.position = 'relative';
+    popupWrapper.style.position = 'absolute';
 
-seeMe2.forEach((n, idx) => n.addEventListener('click', () => {
-  createPopDesktop(idx);
-  pop.classList.add('active');
-  const closeBtn = document.getElementById('close-btn');
-
-  closeBtn.addEventListener('click', () => {
-    const popupRow = document.querySelector('.popup-row');
-    popupRow.classList.add('none');
-    console.log(closeBtn);
-  });
-}));
+    document.querySelector('.close-img').addEventListener('click', () => {
+      n.parentElement.removeChild(popupWrapper);
+    });
+  }));
+});
