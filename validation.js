@@ -1,5 +1,5 @@
 const contactForm = document.getElementById('contact-forms');
-const email = document.getElementById('email');
+const email = document.getElementById('mail');
 const validationMessage = document.getElementById('error');
 
 contactForm.addEventListener('submit', (event) => {

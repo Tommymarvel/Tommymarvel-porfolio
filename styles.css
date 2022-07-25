@@ -32,6 +32,9 @@ body {
   transition: all 2s;
   animation: slidein 2s;
 }
+#error {
+  display: none;
+}
 
 @media (max-width: 768px) {
   #projects-section {
