@@ -200,8 +200,7 @@ clickableBtns.forEach((btn) => {
     n.addEventListener("click", () => {
       n.parentElement.appendChild(popupWrapper);
       n.parentElement.style.position = "relative";
-      popupWrapper.style.position = "absolute";
-
+      
       document.querySelector(".close-img").addEventListener("click", () => {
         n.parentElement.removeChild(popupWrapper);
       });
