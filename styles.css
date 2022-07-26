@@ -1533,6 +1533,7 @@ h3.popup-header {
     position: absolute;
     right: 30px;
     top: 30px;
+    cursor: pointer;
   }
 
   .popup-cano {
