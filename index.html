@@ -15,40 +15,27 @@
     <title>Tommymarvel Portfolio</title>
   </head>
 
-  <body>
-    <div class="firstpage">
-      <header class="white">
-        <a class="logo" href="#">My logo</a>
-        <nav class="nav-bars">
-          <div id="hamburger">
-            <i class="fa fa-bars"></i>
-          </div>
-          <div class="mobile-menu">
-            <a href="#" class="close-icon" id="closemenu"
-              ><img src="/images/Icon.png" alt="X icon" /> ></a
-            >
-            <ul class="mobile-nav">
-              <li class="nav-item">
-                <a href="#work-section-link" class="nav-link">Portfolio</a>
-              </li>
-              <li class="nav-item">
-                <a href="#about-section-link" class="nav-link">About</a>
-              </li>
-              <li class="nav-item">
-                <a href="#contact-form-link" class="nav-link">Contact</a>
-              </li>
-            </ul>
-          </div>
-          <ul class="nav-tags">
-            <li class="nav-item">
-              <a href="#work-section-link" class="nav-link">Portfolio</a>
-            </li>
-            <li class="nav-item">
-              <a href="#about-section-link" class="nav-link">About</a>
-            </li>
-            <li class="nav-item">
-              <a href="#contact-form-link" class="nav-link">Contact</a>
-            </li>
+
+  <title>Tommymarvel Portfolio</title>
+</head>
+
+<body>
+  <div class="firstpage">
+    <header class="white">
+      <a class="logo" href="#">My logo</a>
+      <nav class="nav-bars">
+        <div id="hamburger">
+          <i class="fa fa-bars"></i>
+        </div>
+        <div class="mobile-menu">
+          <a href="#" class="close-icon" id="closemenu"><img src="/images/Icon.png" alt="X icon">
+            ></a>
+          <ul class="mobile-nav">
+            <li class="nav-item"><a href="#work-section-link" class="nav-link">Portfolio</a></li>
+            <li class="nav-item"><a href="#about-section-link" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="#contact-form-link" class="nav-link">Contact</a></li>
+
+ 
           </ul>
         </nav>
       </header>
@@ -171,66 +158,44 @@
           /></a>
         </div>
 
-        <div class="lang lang-2">
-          <h3 class="lang-font">Skills</h3>
-          <a href="#"
-            ><img class="icons" src="images/right-arrow.png" alt="arrow"
-          /></a>
-        </div>
+      <div class="lang lang-2">
+        <h3 class="lang-font">Skills</h3>
+        <a href="#"><img class="icons" src="images/right-arrow.png" alt="arrow" /></a>
+      </div>
+    </div>
+  </section>
+  <!-- </main> -->
+  <footer>
+    <section class="contact-form-section" id="contact-form-link">
+      <div class="contactcenter">
+        <h1 id="contact-me">Contact me</h1>
+        <p id="contact-text">
+          If you have an application you are interested in <br />
+          developing, a feature that you need built or a project <br />
+          that needs coding. I'd love to help with it.
+        </p>
+        <form action="https://formspree.io/f/mlezvnnz" method="post" class="contact-form" id="contact-forms">
+          <ul id="form-data">
+            <li class="input-data">
+              <input type="text" id="name" name="user_name" maxlength="30" placeholder="Your Name" required />
+            </li>
+            <li class="input-data">
+              <input type="email" id="mail" name="user_email" placeholder="Your Email" required />
+            </li>
+            <li class="input-data">
+              <textarea id="msg" name="user_message" maxlength="500" placeholder="Write your message here..." rows="5"
+                required></textarea>
+            </li>
+          </ul>
+          <button type="submit" class="butt">Get In Touch</button>
+          <div id="error" class="validation-error">Kindly make sure your email is in lowercase!</div>
+        </form>
       </div>
     </section>
-    <!-- </main> -->
-    <footer>
-      <section class="contact-form-section" id="contact-form-link">
-        <div class="contactcenter">
-          <h1 id="contact-me">Contact me</h1>
-          <p id="contact-text">
-            If you have an application you are interested in <br />
-            developing, a feature that you need built or a project <br />
-            that needs coding. I'd love to help with it.
-          </p>
-          <form
-            action="https://formspree.io/f/mlezvnnz"
-            method="post"
-            class="contact-form"
-          >
-            <ul id="form-data">
-              <li class="input-data">
-                <input
-                  type="text"
-                  id="name"
-                  name="user_name"
-                  maxlength="30"
-                  placeholder="Your Name"
-                  required
-                />
-              </li>
-              <li class="input-data">
-                <input
-                  type="email"
-                  id="mail"
-                  name="user_email"
-                  placeholder="Your Email"
-                  required
-                />
-              </li>
-              <li class="input-data">
-                <textarea
-                  id="msg"
-                  name="user_message"
-                  maxlength="500"
-                  placeholder="Write your message here..."
-                  rows="5"
-                  required
-                ></textarea>
-              </li>
-            </ul>
-            <button type="submit" class="butt">Get In Touch</button>
-          </form>
-        </div>
-      </section>
-    </footer>
-    <script src="modal.js"></script>
-    <script src="test.js"></script>
-  </body>
+  </footer>
+  <script src="modal.js"></script>
+  <script src="test.js"></script>
+  <script src="validation.js"></script>
+</body>
+
 </html>
